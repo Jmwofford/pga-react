@@ -32,7 +32,6 @@ class App extends Component {
     return (
       <div className="App">
         <h2>PGA ADMIN LEADERBOARD </h2>
-        also
         {/* give me my props..lol */}
         <Players players={this.state.players} />
       </div>
