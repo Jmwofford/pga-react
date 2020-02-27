@@ -24,6 +24,32 @@ class App extends Component {
         score: 84,
         stroke: 0
       }
+    ],
+    courses: [
+      {
+        name: "Pebble Beach GL (Pebble Beach, Calif.)"
+      },
+      {
+        name: "Kapalua Plantation Course."
+      },
+      {
+        name: "Spyglass Hill."
+      },
+      {
+        name: "Harbour Town."
+      },
+      {
+        name: "TPC Sawgrass"
+      },
+      {
+        name: "Sea Island"
+      },
+      {
+        name: "Old White TPC"
+      },
+      {
+        name: "Torrey Pines South"
+      }
     ]
   };
 
@@ -32,8 +58,8 @@ class App extends Component {
     return (
       <div className="App">
         <h2>PGA ADMIN LEADERBOARD </h2>
-        {/* give me my props..lol */}
         <Players players={this.state.players} />
+        {/* give me my props..lol */}
       </div>
     );
   }
