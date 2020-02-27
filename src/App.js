@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Players from "./components/Players";
+class App extends Component {
+  state = {
+    players: [
+      {
+        id: 1,
+        firstName: "Ferris",
+        lastName: "Bueller",
+        score: 100,
+        stroke: 0
+      },
+      {
+        id: 2,
+        firstName: "Phil",
+        lastName: "Mickelson",
+        score: 66,
+        stroke: 0
+      },
+      {
+        id: 3,
+        firstName: "Arnold",
+        lastName: "Palmer",
+        score: 84,
+        stroke: 0
+      }
+    ]
+  };
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    console.log(this.props.players);
+    return (
+      <div className="App">
+        <h2>PGA ADMIN LEADERBOARD </h2>
+        {/* give me my props..lol */}
+        <Players players={this.state.players} />
+      </div>
+    );
+  }
 }
-
 export default App;
